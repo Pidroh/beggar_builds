@@ -10,21 +10,44 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
             background-color: #f0f0f0;
-            flex-direction: column;
-            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
         }
-        .button-container {
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            max-width: 1200px;
+        }
+        .area {
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            width: 100%;
-            max-width: 400px;
+            
             padding: 20px;
+            height: 100%;
             box-sizing: border-box;
+        }
+        .area-a {
+            width: 50%;
+            background-color: #fff;
+            border-right: 2px solid #ddd;
+            justify-content: center;
+            align-items: center;
+        }
+        .area-b {
+            width: 50%;
+            background-color: #fff;
+            align-items: left;
+            justify-content: left;
+        }
+        h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 40px;
+            text-align: center;
         }
         button {
             padding: 15px;
@@ -36,6 +59,7 @@
             cursor: pointer;
             width: 100%;
             text-align: center;
+            margin-bottom: 15px;
             transition: background-color 0.3s;
         }
         button:hover {
@@ -44,31 +68,61 @@
         button:active {
             background-color: #3e8e41;
         }
-        @media (max-width: 600px) {
-            button {
-                font-size: 16px;
-                padding: 12px;
-            }
+        .release-notes {
         }
-        h1 {
-            font-size: 24px;
+        .release-notes h2 {
+            font-size: 26px;
             color: #333;
             margin-bottom: 20px;
         }
-
+        .release-notes p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .meta-data {
+            font-size: 14px;
+            color: #999;
+        }
     </style>
 </head>
 <body>
-    <h1>Beggar Incremental</h1>
-    <div class="button-container">
-        <button onclick="window.location.href='./latest/index.html'">Play the Game</button>
-        <button onclick="window.location.href='./latest_beta/index.html'">Play the Beta</button>
-        <button onclick="window.location.href='./web0011/index.html'">Version 0011</button>
+    <div class="container">
+        <div class="area area-a">
+            <h1>Beggar Incremental</h1>
+            <button onclick="window.location.href='./latest/index.html'">Play the Game</button>
+            <button onclick="window.open('https://www.patreon.com/perennialhearts', '_blank')">Dev Version (Patreon Only)</button>
+            <!-- <button onclick="window.location.href='./latest_beta/index.html'">Play the Beta</button> -->
+            <button onclick="window.location.href='./web0011/index.html'">Version 0011</button>
 <button onclick="window.location.href='./web0010/index.html'">Version 0010</button>
 <button onclick="window.location.href='./web0001/index.html'">Version 0001</button>
-        <button onclick="window.open('https://discord.gg/AtGrxpM', '_blank')">Discord Channel</button>
-        <button onclick="window.open('https://store.steampowered.com/app/1858120/Generic_RPG_Idle/', '_blank')">Generic RPG Idle</button>
+            <button onclick="window.open('https://discord.gg/AtGrxpM', '_blank')">Discord Channel</button>
+            <button onclick="window.open('https://store.steampowered.com/app/1858120/Generic_RPG_Idle/', '_blank')">Generic RPG Idle</button>
+        </div>
+        <div class="area area-b">
+            <div class="release-notes">
+                <h2>Release Notes</h2>
+                
+      <div class="version">
+        <h2>Version 0.20 (Patreon Early Access)</h2>
+        <p>Faith, reason, and the power of literacy await (Contains all content of version 0.15)</p>
+        <p>4 new resource(s)<br>51 new task(s)<br>1 new house(s)<br>6 new class(s)<br>7 new skill(s)<br>5 new location(s)<br>25 new encounter(s)<br>1 new dialog(s)<br>3 new furniture(s)</p>
+      </div>
+    
+      <div class="version">
+        <h2>Version 0.15 (Beta)</h2>
+        <p>Rat companions, feline friendships, and a life of crime</p>
+        <p>16 new resource(s)<br>36 new task(s)<br>3 new house(s)<br>4 new class(s)<br>6 new skill(s)<br>5 new location(s)<br>16 new encounter(s)<br>2 new dialog(s)<br>11 new furniture(s)</p>
+      </div>
+    
+      <div class="version">
+        <h2>Version 0.11 (Stable)</h2>
+        <p>Saving added!</p>
+        <p>16 resource(s)<br>28 task(s)<br>1 house(s)<br>5 class(s)<br>5 skill(s)<br>2 dialog(s)<br>10 furniture(s)</p>
+      </div>
+    
+            </div>
+        </div>
     </div>
-
 </body>
 </html>
