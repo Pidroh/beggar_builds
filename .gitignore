@@ -1,0 +1,2 @@
+# Ignore Unity build report assets generated per build
+**/BuildReportAssets.txt
